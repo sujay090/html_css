@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* Default styles */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .menu-toggle {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .line {
+      width: 100%;
+      height: 4px;
+      background-color: #333;
+      border-radius: 2px;
+    }
+
+    .navbar {
+      display: none;
+    }
+
+    .navbar.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .navbar a {
+      margin: 10px 0;
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <a class="logo" href="#">Portfolio.</a>
+      <div class="menu-toggle" onclick="toggleNavbar()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="navbar" id="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <script>
+      function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.classList.contains("active")) {
+          navbar.classList.remove("active");
+        } else {
+          navbar.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>

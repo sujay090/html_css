@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>how to center in a div in center</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background: #e0bebe;
+      display: grid;
+      place-items: center;
+    }
+    body div {
+      height: 50%;
+      width: 50%;
+      background-color: aquamarine;
+      /* display: flex; */
+      /* flex-direction: row; */
+      /* justify-content: center;
+      align-items: center */
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    <div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shake button</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 62%;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color: aquamarine;
+      display: grid;
+      /* justify-content: center;
+      align-items: center; */
+      place-items: center;
+    }
+    button {
+      height: 14rem;
+      width: 30rem;
+      border-radius: 1rem;
+      border: 5px solid blueviolet;
+      background: transparent;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+    }
+    button:hover {
+      animation: shakeme 0.4s;
+      border: 5px solid red;
+      color: red;
+    }
+
+    @keyframes shakeme {
+      0% {
+        rotate: 30deg;
+      }
+      50% {
+        rotate: -30deg;
+      }
+      100% {
+        rotate: 30deg;
+      }
+    }
+  </style>
+  <body>
+    <body>
+      <button>shake Me</button>
+    </body>
+  </body>
+</html>

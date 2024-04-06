@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100vw;
+      font-family: Arial, Helvetica, sans-serif;
+      background: rgb(209, 60, 124);
+      background: radial-gradient(
+        circle,
+        rgb(1, 11, 30) 0%,
+        rgb(99, 77, 212) 100%
+      );
+      display: grid;
+      place-items: center;
+    }
+    .timercontainer {
+      width: 20vw;
+      height: 40vh;
+      border-radius: 10px;
+      display: flex;
+      /* flex-wrap: wrap; */
+      text-align: center;
+      flex-direction: column;
+      background-color: #050243;
+    }
+    .timercontainer button {
+      height: 2rem;
+      width: 5rem;
+      color: rgb(0, 9, 11);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 600;
+      border-radius: 7px;
+      margin: 0.2rem 10px;
+      border: none;
+      background-color: rgb(184, 203, 247);
+    }
+    .timercontainer h1 {
+      color: white;
+      margin: 20px 0;
+      font-weight: 300;
+      font-size: 70px;
+    }
+    .timercontainer :nth-child(5) {
+      margin-left: 185px;
+      margin-top: -110px;
+    }
+    .timercontainer :nth-child(6) {
+      margin-left: 185px;
+    }
+    .pcontain {
+      width: 20vw;
+      height: 30vh;
+      margin-top:10px;
+      background-color: rgb(3, 18, 53);
+      text-align: center;
+      margin-top: 60px;
+      color: white;
+      text-transform: uppercase;
+      border-radius: 10px;
+    }
+
+  </style>
+  <body>
+    <div class="">
+      <div class="timercontainer">
+      <h1 id="time">0</h1>
+      <button style="cursor: pointer" id="start">Start</button>
+      <button style="cursor: pointer" id="stop">Stop</button>
+      <button style="cursor: pointer" id="Cleartime">Cleartime</button>
+      <button style="cursor: pointer" id="Reset">Reset</button>
+      <button style="cursor: pointer" id="Gettime">Gettime</button>
+    </div>
+      <div class="pcontain"></div>
+    </div>
+   
+
+    <script>
+      let start = document.querySelector("#start");
+      let stop = document.querySelector("#stop");
+      let Reset = document.querySelector("#Reset");
+      let Cleartime = document.querySelector("#Cleartime");
+      let Gettime = document.querySelector("#Gettime");
+      let timercontainer = document.querySelector(".pcontain");
+      let free = "";
+      let time = 0;
+      let interval;
+      const timeInrement = () => {
+        interval = setInterval(() => {
+          document.querySelector("#time").textContent = time++;
+        }, 1000);
+      };
+
+      const stopTime = () => {
+        clearInterval(interval);
+      };
+
+      const resetTime = () => {
+        time = 0;
+        document.querySelector("#time").textContent = `${time}`;
+        clearInterval(interval);
+      };
+
+      const getTime = () => {
+        let p = document.createElement("p");
+        p.innerText = `Get Time Is ${time - 1}`;
+        timercontainer.append(p);
+      };
+
+      const deletgetTime = () => {
+        timercontainer.textContent = free;
+      };
+      Cleartime.addEventListener("click", deletgetTime);
+      Reset.addEventListener("click", resetTime);
+      Gettime.addEventListener("click", getTime);
+      stop.addEventListener("click", stopTime);
+      start.addEventListener("click", timeInrement);
+    </script>
+  </body>
+</html>

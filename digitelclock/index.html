@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100vw;
+      font-family: Arial, Helvetica, sans-serif;
+      background: rgb(131, 58, 180);
+      background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+      );
+      /* display: grid;
+      place-items: center; */
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      position: relative;
+      text-shadow: 4px 5px 3px rgb(9, 17, 17);
+    }
+    .watchcontainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 30vw;
+      height: 10vw;
+      background-color: transparent;
+      border: 3px solid #d6fd1d;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px -5px 10px rgb(3, 254, 174);
+      letter-spacing: 2px;
+      color: azure;
+    }
+    .watchcontainer h1 {
+      text-transform: uppercase;
+    }
+  </style>
+  <body>
+    <div class="watchcontainer">
+      <h1 id="time"></h1>
+    </div>
+    <script>
+      let time = document.querySelector("#time");
+      function newTime() {
+        const date = new Date().toLocaleTimeString();
+        time.textContent = date;
+      }
+      newTime();
+      let interval = setInterval(() => {
+        newTime();
+      }, 1000);
+      // console.log(date);
+    </script>
+  </body>
+</html>

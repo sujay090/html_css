@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+}
+body{
+height:100%;
+width:100%;
+font-family: "Poppins", sans-serif;
+background-color: rgb(240, 251, 251);
+}
+.heading{
+  margin: 45px;
+}
+.heading h1{
+  font-size: 130px;
+  font-weight: 600;
+  line-height: 130px;
+  
+}
+
+.nav{
+position: static;
+position: absolute;
+right: 2%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav p{
+  background-color: #000;
+  color: #fff;
+  margin-right: 10px;
+  padding: 9px 20px;
+  font-size: 20px;
+  border-radius:50px ;
+  -webkit-border-radius:50px ;
+  -moz-border-radius:50px ;
+  -ms-border-radius:50px ;
+  -o-border-radius:50px ;
+}
+
+.introu{
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 40px;
+  margin-top: -20px;
+}
+
+
+.scrool{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.scrool i{
+  margin-right: 8px;
+  font-size: 25px;
+}
+
+.image-div img{
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.about{
+  height: 50%;
+  display: flex;
+  margin: 50px;
+}
+.heding-part1{
+  width: 60%;
+  font-size:35px;
+  padding: 30px;
+  line-height: 75px;
+  font-weight: 300;
+  border-right: 3px solid;
+  margin: 20px;
+}
+
+.part2-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+
+.part2-icons h3{
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.icon{
+  width: 100%;
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon i{
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.firstabout{
+  padding: 20px;
+  border-bottom: 3px solid black;
+}
+.what-do{
+  display: flex;
+  border-top: 3px solid;
+  padding: 50px 20px;
+}
+
+.what{
+  width: 70%;
+  padding-right: 50px;
+  border-right: 3px solid;
+  display: flex;
+  justify-content: space-between
+  
+}
+.work{
+  display: flex;
+  flex-direction: column;
+}
+.what h4 {
+  font-size: 30px;
+  padding-left: 0px;
+}
+
+.what i{
+  font-size: 40px;
+}
+
+.work1{
+  display:flex;
+  padding: 30px;
+  padding-top: 0px;
+}
+.digital{
+  border-right: 3px solid;
+  padding: 30px;
+  padding-top: 0px;
+
+}
+.digital h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 500;
+}
+.art{
+  padding: 40px;
+  padding-top: 0px;
+
+}
+.art h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 500;
+}
+.work2{
+  display: flex;
+  padding: 30px;
+
+}
+.desgin{
+  border-right: 3px solid;
+  padding: 40px;
+
+}
+.desgin h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 500;
+}
+.motain{
+  padding: 40px;
+
+}       
+.motain h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 500;
+
+}
+
+.line{
+  border-top: 3px solid;
+  margin: 0px 40px;
+
+}
+.line2{
+  height: 1px;
+  
+  background: #000;
+  /* /* margin: 0px 20px; */
+  margin-bottom: 20px  ;
+}

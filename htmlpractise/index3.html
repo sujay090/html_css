@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      background-color: black;
+    }
+    .cradel {
+      width: 50rem;
+      height: 50rem;
+      margin-top: 3%;
+      background-color: transparent;
+      border-top: 2rem solid #865dff;
+      border-radius: 0.5rem;
+      display: flex;
+      /* justify-content: space-around; */
+      justify-content: center;
+      gap: 4.6rem;
+    }
+    div {
+      width: 0.5rem;
+      height: 20rem;
+      position: relative;
+      background-color: #865dff;
+    }
+
+    .cradel div::before {
+      content: " ";
+      /* bottom: 40%; */
+      left: -2.25rem;
+      position: absolute;
+      top: 90%;
+      width: 5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #865dff;
+    }
+
+    .cradel div:first-child {
+      animation: leftswing 2s linear infinite;
+      transform-origin: top left;
+    }
+    .cradel div:nth-child(2) {
+      animation: leftswing 2s linear infinite;
+      transform-origin: top left;
+    }
+
+    .cradel div:last-child {
+      animation: rightswing 2s linear 1s infinite;
+      transform-origin: top left;
+    }
+
+    .cradel div:nth-child(4) {
+      animation: rightswing 2s linear 1s infinite;
+      transform-origin: top left;
+    }
+
+    @keyframes leftswing {
+      0% {
+        rotate: 0deg;
+        transform-origin: top left;
+      }
+      25% {
+        rotate: 30deg;
+      }
+      50% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 0deg;
+      }
+    }
+
+    @keyframes rightswing {
+      0% {
+        rotate: 0deg;
+        transform-origin: top right;
+      }
+      25% {
+        rotate: -30deg;
+      }
+      50% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 0deg;
+      }
+    }
+    
+  </style>
+  <body>
+    <div class="cradel">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

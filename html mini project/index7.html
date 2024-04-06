@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text floating</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-color: rgb(6, 6, 6);
+      display: grid;
+      place-content: center;
+    }
+    h1 {
+      font-size: 120px;
+      text-shadow: 7px 4px 5px rgb(241, 152, 79);
+      text-transform: uppercase;
+      text-align: center;
+      font-family: "Bungee Spice", sans-serif;
+      animation: textfloating 2s linear infinite alternate;
+    }
+    @keyframes textfloating {
+      0% {
+        rotate: 15deg;
+      }
+      50% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: -15deg;
+      }
+    }
+  </style>
+
+  <body>
+    <h1>sujay <br />pradhan</h1>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rain moonsoon</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-image: url("https://media.istockphoto.com/id/617770108/photo/destroyed-crop-by-flood-and-heavy-rain.jpg?s=2048x2048&w=is&k=20&c=5mRk9kcpx0th5_9Z6BXRY1eUn690T5MrfJfRd8MxBxg=");
+      background-size: cover;
+    }
+    .rain {
+      height: 100vh;
+      width: 100vw;
+      background-image: url("https://img.freepik.com/premium-vector/rain-effect-realistic-water-drops-falling-from-sky-heavy-rain-weather-storm-shower-rainfall-monsoon-season-3d-rainy-vector-background_102902-4235.jpg?w=740");
+      opacity: 0.3;
+      animation: raining 2s linear infinite;
+    }
+    @keyframes raining {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 10% 100%;
+      }
+    }
+  </style>
+  <body>
+    <div class="rain"></div>
+  </body>
+</html>

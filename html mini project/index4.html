@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loader</title>
+  </head>
+  <style>
+    html {
+      font-size: 62%;
+    }
+    body {
+      height: 100vh;
+      background-color: #191825;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      /* position: absolute; */
+    }
+
+    .loader {
+      width: 20rem;
+      aspect-ratio: 1;
+      background-color: #865dff;
+      border-radius: 50%;
+      position: relative;
+      animation: loadercircle 3s linear infinite reverse;
+    }
+
+    .loader::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 17rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #191825;
+    }
+    .loader::after {
+      content: "";
+      position: absolute;
+      top: -2.3rem;
+      left: 8rem;
+      width: 5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #865dff;
+      box-shadow: 0 0 1rem #865dff, 0 0 1.5rem #865dff, 0 0 2rem #865dff,
+        0 0 2.5rem #865dff, 0 0 3rem #865dff;
+    }
+    @keyframes loadercircle {
+      100% {
+        rotate: 360deg;
+      }
+    }
+  </style>
+  <body>
+    <div class="loader"></div>
+  </body>
+</html>
